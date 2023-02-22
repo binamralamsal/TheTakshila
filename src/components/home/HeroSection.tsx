@@ -1,5 +1,6 @@
 import styles from "./HeroSection.module.css";
 import { Button } from "@/components/ui/Button";
+import Image from "next/image";
 
 export const HeroSection = () => {
   return (
@@ -51,18 +52,21 @@ export const HeroSection = () => {
           </div>
         </div>
         <div className={styles.rightImages}>
-          <img
+          <Image
             alt="Girl thumbchecking"
             className={styles.girlImage}
             data-aos="fade-left"
             data-aos-delay="450"
-            height="854"
+            width={536.047}
+            height={651.188}
             src="/home/girl-thumb.png"
           />
-          <img
+          <Image
             alt="Girl background"
             className={styles.girlBg}
             data-aos="fade-left"
+            width={554.969}
+            height={529.094}
             data-aos-delay="600"
             src="/home/girl-bg.png"
           />
@@ -70,14 +74,18 @@ export const HeroSection = () => {
       </div>
 
       <div>
-        <img
+        <Image
           alt="Decoration 1"
           className={styles.shape1}
+          width={88.992}
+          height={102}
           src="/home/shape-1.png"
         />
-        <img
+        <Image
           alt="Decoration 3"
           className={styles.shape3}
+          width={96}
+          height={96}
           src="/home/shape-3.png"
         />
       </div>

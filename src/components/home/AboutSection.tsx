@@ -1,5 +1,6 @@
 import styles from "./AboutSection.module.css";
 import { Button } from "@/components/ui/Button";
+import Image from "next/image";
 
 export const AboutSection = () => {
   return (
@@ -26,17 +27,21 @@ export const AboutSection = () => {
                   <path d="M12 18.5l-3 1.5l.5 -3.5l-2 -2l3 -.5l1.5 -3l1.5 3l3 .5l-2 2l.5 3.5z" />
                 </svg>
               </div>
-              <img
+              <Image
                 src="/home/about-image-1.jpg"
                 className={styles.image1}
+                width={168}
+                height={193.188}
                 alt=""
               />
             </div>
-            <img
+            <Image
               src="/home/about-image-2.jpg"
               className={styles.image2}
               alt=""
               data-aos="fade-right"
+              height={315}
+              width={315}
             />
           </div>
           <div
@@ -71,10 +76,12 @@ export const AboutSection = () => {
                 <p>Interesting Courses</p>
               </div>
             </div>
-            <img
+            <Image
               src="/home/about-image-3.jpg"
               className={styles.image3}
               alt=""
+              height={220}
+              width={400}
             />
           </div>
         </div>

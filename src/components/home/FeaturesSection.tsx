@@ -1,5 +1,6 @@
 import styles from "./FeaturesSection.module.css";
 import { Idea, Journey, Money, Resources } from "@/assets/icons";
+import Image from "next/image";
 
 export const FeaturesSection = () => {
   return (
@@ -9,7 +10,12 @@ export const FeaturesSection = () => {
     >
       <div className={`container ${styles.featuresContainer} even-columns`}>
         <div className={styles.image} data-aos="fade-right">
-          <img src="/home/features-image.jpg" alt="Features" />
+          <Image
+            src="/home/features-image.jpg"
+            alt="Features"
+            width={450}
+            height={590}
+          />
         </div>
         <div>
           <header data-aos="fade-left">
