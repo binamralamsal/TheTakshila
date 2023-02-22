@@ -1,0 +1,113 @@
+.heroSection {
+  background: url("/home/hero-background.jpg") no-repeat;
+  background-size: cover;
+}
+
+.heroContainer {
+  padding: 12rem 0 10rem 0;
+  position: relative;
+}
+
+.preTitle {
+  font-weight: var(--fw-700);
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 0.625rem;
+}
+
+.preTitle::before {
+  content: "";
+  height: 0.15em;
+  background: var(--clr-accent-400);
+  width: 3.125em;
+}
+
+.title {
+  font-size: var(--fs-900);
+  font-weight: var(--fw-800);
+  color: var(--clr-accent-900);
+  line-height: 1.25;
+  max-width: 15ch;
+}
+
+.caption {
+  font-size: var(--fs-500);
+  line-height: 2em;
+  margin: 1.875rem 0;
+  max-width: 45ch;
+}
+
+.girlBg,
+.girlImage {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  height: 80%;
+}
+
+.girlBg {
+  height: 65%;
+}
+
+.girlImage {
+  z-index: 99;
+}
+
+.rightImages::before {
+  content: url("/home/shape-2.png");
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
+.shape1,
+.shape3 {
+  position: absolute;
+}
+
+.shape1 {
+  left: 10px;
+  top: 90px;
+}
+
+.shape3 {
+  top: 250px;
+  right: 5%;
+}
+
+@media screen and (max-width: 68em) {
+  .shape1 {
+    display: none;
+  }
+
+  .girlImage {
+    height: 60%;
+  }
+
+  .girlBg {
+    height: 50%;
+  }
+}
+
+@media screen and (max-width: 56.25em) {
+  .heroContainer {
+    grid-template-columns: 1fr;
+    padding: 8rem 0 6rem 0;
+  }
+
+  .title,
+  .caption {
+    max-width: 100%;
+  }
+
+  .girlImage,
+  .girlBg,
+  .shape1,
+  .shape3,
+  .rightImages::before {
+    display: none;
+  }
+}

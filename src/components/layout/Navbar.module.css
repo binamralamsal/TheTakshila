@@ -1,0 +1,130 @@
+.navbarWrapper {
+  padding: 1rem 0;
+  position: relative;
+  top: 0;
+  z-index: 999;
+}
+
+.navbarWrapper.transparent {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+@keyframes headerSticky {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+.navbarWrapper.scrolled {
+  padding: 0.5rem 0;
+  position: sticky;
+  background-color: white;
+  animation: headerSticky 0.95s ease forwards;
+  box-shadow: 0 3px 9px rgb(0 0 0 / 5%);
+}
+
+.navbarWrapper.transparent.scrolled {
+  position: fixed;
+}
+
+.navbarContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navLinks {
+  list-style-type: none;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.mobileNavToggle {
+  display: none;
+  background: none;
+  border: 0;
+  flex-direction: column;
+  padding: 0.5rem;
+  cursor: pointer;
+  gap: 0.3rem;
+}
+
+.mobileNavToggle span {
+  background: var(--clr-neutral-400);
+  display: inline-block;
+  padding: 0.05rem 0.55rem;
+  transition: all 0.2s ease 0s;
+  transform-origin: left center;
+}
+
+.mobileNavToggle.active span:first-child {
+  transform: rotate(45deg);
+}
+
+.mobileNavToggle.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.mobileNavToggle.active span:last-child {
+  transform: rotate(-45deg);
+}
+
+.navLink {
+  padding: 1rem;
+  text-decoration: none;
+  display: inline-block;
+  transition: color 0.2s ease;
+  color: var(--clr-neutral-400);
+  font-weight: var(--fw-600);
+}
+
+.navLink:active,
+.navLink:hover {
+  color: var(--clr-accent-400);
+}
+
+.navLink.active:hover {
+  color: var(--clr-accent-600);
+}
+
+@media screen and (max-width: 40em) {
+  .navbarWrapper {
+    padding: 0.5rem 0;
+  }
+
+  .primaryNavigation {
+    display: none;
+    position: absolute;
+    top: 100%;
+    height: 0;
+    background: white;
+    left: 0;
+    animation: height 0.2s ease;
+    right: 0;
+  }
+
+  .primaryNavigation.active {
+    display: block;
+    height: auto;
+  }
+
+  .navLinks {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .mobileNavToggle {
+    display: flex;
+  }
+
+  .navLink {
+    width: 100%;
+    padding: 0.5rem 2rem;
+  }
+}
