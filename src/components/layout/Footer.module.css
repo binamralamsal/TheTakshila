@@ -1,0 +1,10 @@
+.footer {
+  background: var(--clr-accent-900);
+  overflow: hidden;
+  color: white;
+}
+
+.copyrightText {
+  text-align: center;
+  padding: 2rem;
+}

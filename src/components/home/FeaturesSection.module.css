@@ -1,0 +1,134 @@
+.featuresSection {
+  padding: 8rem 0;
+  overflow: hidden;
+  background-size: cover;
+}
+
+.featuresContainer {
+  gap: 3rem;
+  align-items: center;
+  position: relative;
+}
+
+.featuresContainer::before,
+.featuresContainer::after {
+  position: absolute;
+  right: -20%;
+}
+
+.featuresContainer::before {
+  content: url("/home/features-decoration-1.png");
+  top: 10%;
+}
+
+.featuresContainer::after {
+  content: url("/home/features-decoration-2.png");
+  bottom: 10%;
+}
+
+.image {
+  position: relative;
+}
+
+.image img {
+  z-index: 20;
+  position: relative;
+}
+
+.image::before,
+.image::after {
+  position: absolute;
+}
+
+.image::before {
+  content: url("/home/features-image-1.jpg");
+  top: 10%;
+  left: -15%;
+  z-index: 10;
+}
+
+.image::after {
+  content: url("/home/features-image-2.jpg");
+  bottom: 10%;
+  right: 0%;
+  z-index: 30;
+}
+
+.preTitle {
+  font-weight: var(--fw-700);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 0.625rem;
+  display: block;
+}
+
+.title {
+  font-size: var(--fs-700);
+  font-weight: var(--fw-800);
+  color: var(--clr-heading);
+  line-height: 1.4;
+}
+
+.services {
+  margin-top: 2.5rem;
+}
+
+.services {
+  display: flex;
+  flex-direction: column;
+  gap: 1.875rem;
+}
+
+.service {
+  display: flex;
+  gap: 1rem;
+}
+
+.serviceIcon {
+  align-self: flex-start;
+  border-radius: 100%;
+  display: flex;
+  background: hsla(204, 100%, 55%, 0.1);
+  padding: 0.75rem;
+}
+
+.serviceTitle {
+  color: var(--clr-accent-900);
+  margin-bottom: 0.3125rem;
+  font-size: 1.25rem;
+  font-weight: var(--fw-700);
+}
+
+@media screen and (max-width: 75em) {
+  .image::before {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 60em) {
+  .image::after {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 48em) {
+  .image img {
+    width: 100%;
+  }
+
+  .featuresContainer::before,
+  .featuresContainer::after {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 40em) {
+  .featuresSection {
+    padding: 5rem 0;
+  }
+
+  .image::before,
+  .image::after {
+    display: none;
+  }
+}

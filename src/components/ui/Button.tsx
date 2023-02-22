@@ -24,7 +24,6 @@ type ButtonProps = IBaseProps & ReactButtonProps & {};
 type ButtonComponentProps<T extends ButtonComponentType> = {
   as?: T;
   children: ReactNode;
-  // based on the "as" value, either intersect with ButtonProps or AnchorProps
 } & (T extends ButtonComponentType.BUTTON ? ButtonProps : AnchorProps);
 
 export function Button<T extends ButtonComponentType>({

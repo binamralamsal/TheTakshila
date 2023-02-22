@@ -1,0 +1,141 @@
+.jobStagesSection {
+  padding: 8rem 0;
+  background: url("/home/job-stages-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+}
+
+.title {
+  font-size: var(--fs-700);
+  font-weight: var(--fw-800);
+  color: var(--clr-accent-900);
+  text-align: center;
+  margin-bottom: 2.5rem;
+  line-height: 1.4;
+}
+
+.container {
+  position: relative;
+}
+
+.container::before {
+  content: url("/home/stage-decoration-1.png");
+  position: absolute;
+  top: -15%;
+  left: -15%;
+  animation: left-right 4s linear infinite alternate;
+}
+
+.container::after {
+  content: url("/home/stage-decoration-2.png");
+  position: absolute;
+  top: 15%;
+  right: -15%;
+  animation: top-bottom 4s linear infinite alternate;
+}
+
+.title span {
+  display: block;
+}
+
+.stages {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-content: center;
+  gap: 2rem;
+  text-align: center;
+  align-items: center;
+  row-gap: 3rem;
+}
+
+.stage {
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.stageDescription {
+  max-width: 35ch;
+}
+
+.icon {
+  padding: 1.5rem;
+  border-radius: 100%;
+  display: flex;
+  margin-bottom: 2.5rem;
+}
+
+.stageFirst .icon {
+  position: relative;
+  background: hsl(26, 98%, 49%);
+}
+
+.stageFirst::before {
+  content: url("/home/job-decoration-3.png");
+  position: absolute;
+  left: -50%;
+  bottom: -50%;
+}
+
+.stageSecond .icon {
+  background: var(--clr-accent-400);
+}
+
+.stageThird .icon {
+  background: hsl(36, 100%, 55%);
+}
+
+.stageFirst::after {
+  content: url("/home/stage-arrow.png");
+  position: absolute;
+  right: -25%;
+  top: 25%;
+}
+
+.stageSecond::after {
+  content: url("/home/stage-arrow.png");
+  position: absolute;
+  transform: scaleY(-1);
+  right: -25%;
+  top: 0%;
+}
+
+@media screen and (max-width: 60rem) {
+  .container::before,
+  .container::after,
+  .stageFirst::before,
+  .stage::after {
+    display: none;
+  }
+
+  .stage {
+    padding: 0;
+  }
+}
+
+@media screen and (max-width: 50rem) and (min-width: 38rem) {
+  .jobStagesSection {
+    padding: 5rem 0;
+  }
+
+  .stages {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .stageThird {
+    grid-column: span 2;
+  }
+}
+
+@media screen and (max-width: 38rem) {
+  .jobStagesSection {
+    padding: 5rem 0;
+  }
+
+  .stages {
+    grid-template-columns: 1fr;
+  }
+}

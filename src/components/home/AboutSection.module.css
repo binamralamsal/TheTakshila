@@ -1,0 +1,260 @@
+.aboutSection {
+  padding: 8rem 0;
+  overflow: hidden;
+}
+
+.aboutContainer {
+  align-items: center;
+  gap: 3rem;
+}
+
+.preTitle {
+  font-weight: var(--fw-700);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 0.625rem;
+  display: block;
+}
+
+.title {
+  font-size: var(--fs-700);
+  font-weight: var(--fw-800);
+  color: var(--clr-heading);
+  line-height: 1.4;
+}
+
+.images {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  padding: 1rem;
+  gap: 1rem;
+}
+
+.images::before,
+.images::after {
+  position: absolute;
+  left: -50%;
+}
+
+.images::before {
+  content: url("/home/about-shape-1.png");
+  top: -10%;
+}
+
+.images::after {
+  content: url("/home/about-shape-3.png");
+  bottom: -10%;
+}
+
+.aboutDescription {
+  position: relative;
+}
+
+.aboutDescription::before,
+.aboutDescription::after {
+  position: absolute;
+  right: -50%;
+}
+
+.aboutDescription::before {
+  content: url("/home/about-shape-2.png");
+  top: -10%;
+}
+
+.aboutDescription::after {
+  content: url("/home/about-shape-4.png");
+  bottom: -10%;
+}
+
+.row1 {
+  display: flex;
+  gap: 1rem;
+}
+
+.rowImage1Container {
+  align-self: flex-end;
+  justify-self: flex-end;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.rowIcon {
+  z-index: 999;
+  padding: 0.75rem;
+  border-radius: 100%;
+  position: absolute;
+  display: flex;
+  top: -1.5rem;
+  justify-content: center;
+  align-items: center;
+  background: var(--clr-accent-400);
+  color: white;
+}
+
+.image2 {
+  align-self: flex-start;
+  justify-self: flex-end;
+}
+
+.row2 {
+  position: relative;
+}
+
+.studentsCount {
+  padding: 1rem;
+  display: flex;
+  background: white;
+  top: 50%;
+  left: -25px;
+  gap: 0.75rem;
+  position: absolute;
+  box-shadow: 0 10px 25px rgb(0 0 0 / 8%);
+  border-radius: var(--radius-600);
+  align-items: center;
+  animation: bounceSlide 4s infinite;
+}
+
+@keyframes bounceSlide {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-30px);
+  }
+  60% {
+    transform: translateY(-15px);
+  }
+}
+
+.countIcon {
+  padding: 0.75em;
+  background: var(--clr-accent-400);
+  border-radius: 100%;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.countTitle {
+  font-weight: var(--fw-700);
+  color: var(--clr-accent-400);
+}
+
+.caption {
+  margin: 1.875rem 0;
+}
+
+.features {
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.feature {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.featureIcon {
+  padding: 0.75em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  background: var(--clr-accent-400);
+  border-radius: 100%;
+}
+
+.featureTitle {
+  color: var(--clr-accent-900);
+  font-size: var(--fs-500);
+  font-weight: var(--fw-600);
+  margin-bottom: 0.625rem;
+}
+
+@media screen and (max-width: 68em) {
+  .image1 {
+    height: 180px;
+  }
+
+  .image2 {
+    height: 230px;
+  }
+
+  .image3 {
+    height: 150px;
+  }
+}
+
+@media screen and (max-width: 60em) {
+  .features {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (max-width: 56em) {
+  .image1 {
+    height: 140px;
+  }
+
+  .image2 {
+    height: 190px;
+  }
+
+  .image3 {
+    height: 110px;
+  }
+}
+
+@media screen and (max-width: 48em) {
+  .aboutSection {
+    padding: 3rem 0;
+  }
+
+  .images {
+    padding: 0 3rem;
+  }
+
+  .images::before,
+  .images::after,
+  .aboutDescription::before,
+  .aboutDescription::after {
+    display: none;
+  }
+
+  .image1,
+  .rowImage1Container,
+  .image2,
+  .image3 {
+    width: 100%;
+    height: auto;
+  }
+
+  .studentsCount {
+    bottom: 0.5rem;
+    left: 0.5rem;
+    top: auto;
+  }
+}
+
+@media screen and (max-width: 40em) {
+  .row1,
+  .row2 {
+    flex-direction: column;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 30em) {
+  .images {
+    padding: 0;
+  }
+}
