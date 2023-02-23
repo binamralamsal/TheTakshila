@@ -2,6 +2,7 @@ import styles from "./Navbar.module.css";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import { Menu } from "@headlessui/react";
 
 const pagesWithTransparentNavbar = ["/"];
 
@@ -81,15 +82,45 @@ export const Navbar = () => {
                 About
               </Link>
             </li>
-            <li>
+            <li className={styles.dropdownLink}>
               <Link
-                className={styles.navLink}
                 href="/course-details"
+                className={`${styles.navLink} `}
                 onClick={handleToggleNavbar}
               >
                 Course Details
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="icon icon-tabler icon-tabler-chevron-down"
+                  width="14"
+                  height="14"
+                  viewBox="0 0 24 24"
+                  strokeWidth="2"
+                  stroke="currentColor"
+                  fill="none"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                  <path d="M6 9l6 6l6 -6"></path>
+                </svg>
               </Link>
+              <ul className={styles.dropdown}>
+                <li className={styles.dropdownItem}>
+                  <Link href="#">Typescript</Link>
+                </li>
+                <li className={styles.dropdownItem}>
+                  <Link href="#">Next.js</Link>
+                </li>
+                <li className={styles.dropdownItem}>
+                  <Link href="#">React.js</Link>
+                </li>
+                <li className={styles.dropdownItem}>
+                  <Link href="#">Elixir</Link>
+                </li>
+              </ul>
             </li>
+
             <li>
               <Link
                 className={styles.navLink}

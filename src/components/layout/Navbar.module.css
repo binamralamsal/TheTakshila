@@ -78,10 +78,13 @@
 .navLink {
   padding: 1rem;
   text-decoration: none;
-  display: inline-block;
   transition: color 0.2s ease;
   color: var(--clr-neutral-400);
   font-weight: var(--fw-600);
+  display: flex;
+  gap: 0.2rem;
+  align-items: center;
+  position: relative;
 }
 
 .navLink:active,
@@ -91,6 +94,37 @@
 
 .navLink.active:hover {
   color: var(--clr-accent-600);
+}
+
+.dropdown {
+  display: none;
+  position: absolute;
+  padding: 0.25rem;
+  top: 4.2rem;
+  background: white;
+  list-style-type: none;
+  flex-direction: column;
+  border-radius: var(--radius-400);
+  gap: 0.25rem;
+  min-width: 20ch;
+}
+
+.dropdownItem a {
+  color: var(--clr-neutral-400);
+  display: block;
+  padding: 0.5rem 0.75rem;
+  transition: 0.3s;
+  border-radius: var(--radius-500);
+}
+
+.dropdownItem a:hover {
+  background: var(--clr-accent-400);
+  color: white;
+}
+
+.dropdownLink:hover > .dropdown,
+.dropdownLink .navLink:focus ~ .dropdown {
+  display: flex;
 }
 
 @media screen and (max-width: 40em) {
