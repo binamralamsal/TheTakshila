@@ -1,0 +1,82 @@
+.offersSection {
+  padding: 8rem 0;
+  overflow: hidden;
+  background-size: cover;
+  background: url("/about/upcoming-event-bg.jpg") no-repeat center;
+  color: white;
+}
+
+.offersContainer {
+  text-align: center;
+  position: relative;
+}
+
+.title span {
+  display: block;
+}
+
+.preTitle {
+  font-weight: var(--fw-700);
+  text-transform: uppercase;
+  margin-bottom: 0.3125rem;
+}
+
+.mainTitle {
+  font-size: var(--fs-700);
+  font-weight: var(--fw-800);
+  line-height: 1.4;
+  margin-bottom: 3.5rem;
+}
+
+.countdowns {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  gap: 1rem;
+  flex-wrap: wrap;
+  max-width: fit-content;
+}
+
+.countdown {
+  padding: 1rem 1.75rem;
+  border-radius: var(--radius-400);
+  background: white;
+  position: relative;
+}
+
+.separator {
+  font-weight: var(--fw-800);
+  font-size: var(--fs-500);
+}
+
+.countdownTitle {
+  color: var(--clr-secondary-400);
+  font-size: var(--fs-600);
+  min-width: 3ch;
+  font-weight: var(--fw-700);
+}
+
+.subText {
+  color: var(--clr-neutral-300);
+  text-transform: uppercase;
+  min-width: 6ch;
+  font-size: var(--fs-300);
+}
+
+@media screen and (max-width: 48em) {
+  .offersSection {
+    padding: 5rem 0;
+  }
+
+  .mainTitle {
+    margin-bottom: 2rem;
+  }
+}
+
+@media screen and (max-width: 38em) {
+  .separator {
+    display: none;
+  }
+}

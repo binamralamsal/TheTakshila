@@ -1,0 +1,59 @@
+.workshopSection {
+  padding: 8rem 0;
+  overflow: hidden;
+  background-size: cover;
+  background: url("/about/workshop-bg.png"), var(--clr-accent-400);
+  color: white;
+}
+
+.workshopContainer {
+  gap: 3rem;
+  align-items: center;
+  position: relative;
+}
+
+.workshopDetail {
+  margin: 2.5rem 0;
+}
+
+.workshopImage {
+  position: relative;
+}
+
+.workshopImage img {
+  z-index: 99;
+  position: relative;
+}
+
+.workshopImage::before {
+  content: url("/about/workshop-01.png");
+  position: absolute;
+  bottom: -15%;
+  right: -10%;
+}
+
+.preTitle {
+  font-weight: var(--fw-700);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 0.625rem;
+  display: block;
+}
+
+.title {
+  font-size: var(--fs-700);
+  font-weight: var(--fw-800);
+  line-height: 1.4;
+}
+
+@media screen and (max-width: 48em) {
+  .workshopContainer::after {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 40em) {
+  .workshopSection {
+    padding: 5rem 0;
+  }
+}

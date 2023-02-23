@@ -1,0 +1,152 @@
+.aboutSection {
+  padding: 8rem 0;
+  overflow: hidden;
+}
+
+.aboutContainer {
+  align-items: center;
+  gap: 3rem;
+}
+
+.preTitle {
+  font-weight: var(--fw-700);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 0.625rem;
+  display: block;
+}
+
+.title {
+  font-size: var(--fs-700);
+  font-weight: var(--fw-800);
+  color: var(--clr-heading);
+  line-height: 1.4;
+}
+
+.aboutDescription {
+  position: relative;
+}
+
+.images {
+  position: relative;
+}
+
+.aboutBottomImage {
+  position: absolute;
+  width: 50%;
+  bottom: -10%;
+  right: 0;
+}
+
+.aboutBottomImage .main {
+  position: relative;
+  z-index: 2;
+}
+
+.circleImage {
+  width: 100%;
+  position: absolute;
+  bottom: -2%;
+  right: -5%;
+  height: 100%;
+  border-radius: 38% 62% 64% 36%/43% 35% 65% 57%;
+  border: 2px solid var(--clr-secondary-400);
+  animation: rotate-animate 13s linear infinite;
+}
+
+.sessionStats {
+  position: absolute;
+  top: 5%;
+  left: -15%;
+  background: white;
+  border-radius: 100%;
+  padding: 2rem;
+  aspect-ratio: 1/1;
+  box-shadow: 0 10px 35px rgb(0 0 0 / 5%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+
+.statTitle {
+  font-size: var(--fs-600);
+  font-weight: var(--fw-700);
+}
+
+.statDetails {
+  font-weight: var(--fw-700);
+  max-width: 10ch;
+}
+
+@keyframes rotate-animate {
+  0% {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(1turn);
+  }
+}
+
+@media screen and (max-width: 48em) {
+  .aboutBottomImage {
+    display: none;
+  }
+
+  .sessionStats {
+    top: 0;
+    left: 0;
+    padding: 1rem;
+  }
+}
+
+.aboutDescription::before,
+.aboutDescription::after {
+  position: absolute;
+  right: -50%;
+}
+
+.aboutDescription::before {
+  content: url("/home/about-shape-2.png");
+  top: -10%;
+}
+
+.aboutDescription::after {
+  content: url("/home/about-shape-4.png");
+  bottom: -10%;
+}
+
+.caption {
+  margin: 1.875rem 0;
+}
+
+.featuresTitle {
+  margin-bottom: 1.25rem;
+  font-weight: var(--fw-700);
+  font-size: 1.25rem;
+}
+
+.featureStat {
+  font-size: var(--fs-600);
+  font-weight: var(--fw-700);
+  color: var(--clr-secondary-400);
+  margin-bottom: 0.3125rem;
+}
+
+.features {
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+@media screen and (max-width: 60em) {
+  .features {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (max-width: 48em) {
+  .aboutSection {
+    padding: 3rem 0;
+  }
+}

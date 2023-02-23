@@ -1,0 +1,170 @@
+.teamSection {
+  padding: 8rem 0;
+  overflow: hidden;
+  background: url("/home/blog-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.teamContainer {
+  text-align: center;
+  position: relative;
+}
+
+.title span {
+  display: block;
+}
+
+.preTitle {
+  font-weight: var(--fw-700);
+  text-transform: uppercase;
+  margin-bottom: 0.3125rem;
+}
+
+.mainTitle {
+  font-size: var(--fs-700);
+  font-weight: var(--fw-800);
+  line-height: 1.4;
+  margin-bottom: 2rem;
+}
+
+.members {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  list-style-type: none;
+  gap: 1.25rem;
+}
+
+.member {
+  padding: 1.25rem;
+}
+
+.photo {
+  padding: 1.25rem;
+  margin-bottom: 1.6rem;
+  position: relative;
+}
+
+.photo img {
+  width: 100%;
+}
+
+.photo::before {
+  content: "";
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  background-image: url("/about/photo-outer.png");
+  aspect-ratio: 1/1;
+  background-size: contain;
+  transition: all 0.5s;
+}
+
+.inner {
+  position: relative;
+}
+
+.inner::before {
+  content: "";
+  background: var(--clr-accent-900);
+  opacity: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  position: absolute;
+  border-radius: 100%;
+  transition: all 0.5s;
+}
+
+.member:hover .photo::before {
+  transform: rotate(90deg);
+}
+
+.member:hover .inner::before {
+  opacity: 0.4;
+}
+
+.position {
+  transition: 0.5s all;
+}
+
+.member:hover .position {
+  color: var(--clr-accent-400);
+}
+
+.photo img {
+  border-radius: 100%;
+}
+
+.socials {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: flex;
+  gap: 0.25rem;
+  transform: translate(-50%, -50%);
+}
+
+.socials a {
+  padding: 0.5rem;
+  background: white;
+  display: flex;
+  border-radius: 100%;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(0.5rem);
+  transition: all 0.45s cubic-bezier(0.23, 0.88, 0.34, 0.99);
+}
+
+.member:hover .socials a {
+  transform: translateY(0);
+  opacity: 1;
+  visibility: visible;
+}
+
+.member .facebook {
+  transition-delay: 0.07692s;
+}
+
+.member .linkedin {
+  transition-delay: 0.15385s;
+}
+
+.member .twitter {
+  transition-delay: 0.23077s;
+}
+
+.name {
+  font-size: var(--fs-500);
+  font-weight: var(--fw-700);
+  margin-bottom: 0.3125rem;
+}
+
+@media screen and (max-width: 58em) {
+  .members {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (max-width: 48em) {
+  .teamSection {
+    padding: 5rem 0;
+  }
+
+  .mainTitle {
+    margin-bottom: 2rem;
+  }
+
+  .members {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 32em) {
+  .members {
+    grid-template-columns: 1fr;
+  }
+}

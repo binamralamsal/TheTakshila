@@ -34,7 +34,7 @@ export function Button<T extends ButtonComponentType>({
   ...restProps
 }: ButtonComponentProps<T>) {
   const commonProps = {
-    className: `${styles.btn} ${variant} ${size}`,
+    className: `${styles.btn} ${styles[variant]} ${styles[size]}`,
   };
 
   if (as === ButtonComponentType.LINK)
