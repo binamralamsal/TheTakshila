@@ -1,0 +1,48 @@
+.courseSidebar {
+  background: white;
+  border-radius: var(--radius-600);
+  box-shadow: 0 10px 30px rgb(0 0 0 / 7%);
+  align-self: flex-start;
+  padding: 2.5rem;
+  position: sticky;
+  top: 5rem;
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+}
+
+.courseSidebar ul {
+  list-style-type: none;
+}
+
+.courseSidebar li {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 0;
+  flex-wrap: wrap;
+  border-bottom: 1px solid #eee;
+}
+
+.icon {
+  color: var(--clr-accent-400);
+}
+
+.lastDetail {
+  border-bottom: 0;
+}
+
+.courseSidebar li > span {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.statTitle {
+  font-weight: var(--fw-600);
+}
+
+@media screen and (max-width: 57em) {
+  .courseSidebar {
+    padding: 1rem 1.5rem 1rem 1.5rem;
+  }
+}

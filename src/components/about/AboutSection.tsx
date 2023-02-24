@@ -1,4 +1,5 @@
 import styles from "./AboutSection.module.css";
+import Image from "next/image";
 
 export const AboutSection = () => {
   return (
@@ -15,13 +16,15 @@ export const AboutSection = () => {
               Finished Session
             </p>
           </div>
-          <img src="/about/about.png" alt="About" />
+          <Image src="/about/about.png" alt="About" height={460} width={460} />
 
           <div className={styles.aboutBottomImage}>
-            <img
+            <Image
               src="/about/about-image-bottom.png"
               className={styles.main}
               alt=""
+              height={265.5}
+              width={265.5}
             />
             <div className={styles.circleImage} />
           </div>

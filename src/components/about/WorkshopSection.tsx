@@ -1,5 +1,6 @@
 import styles from "./WorkshopSection.module.css";
 import { Button } from "@/components/ui/Button";
+import Image from "next/image";
 
 export const WorkshopSection = () => {
   return (
@@ -50,7 +51,12 @@ export const WorkshopSection = () => {
         </div>
 
         <div className={styles.workshopImage} data-aos="fade-left">
-          <img src="/about/workshop.jpg" alt="workshop" />
+          <Image
+            src="/about/workshop.jpg"
+            alt="workshop"
+            width={531}
+            height={348.172}
+          />
         </div>
       </div>
     </section>

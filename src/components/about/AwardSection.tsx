@@ -1,4 +1,5 @@
 import styles from "./AwardSection.module.css";
+import Image from "next/image";
 
 export const AwardSection = () => {
   return (
@@ -24,10 +25,12 @@ export const AwardSection = () => {
 
         <ul className={styles.awards}>
           <li className={styles.award} data-aos="fade-up">
-            <img
+            <Image
               src="/about/award-01.png"
               alt=""
               className={styles.awardImage}
+              height={40}
+              width={40}
             />
             <p className={styles.awardSubText}>Market / 2023</p>
             <h3 className={`color-heading ${styles.awardTitle}`}>
@@ -36,10 +39,12 @@ export const AwardSection = () => {
           </li>
 
           <li className={styles.award} data-aos="fade-up">
-            <img
+            <Image
               src="/about/award-02.png"
               alt=""
               className={styles.awardImage}
+              height={40}
+              width={40}
             />
             <p className={styles.awardSubText}>Udemy / 2023</p>
             <h3 className={`color-heading ${styles.awardTitle}`}>
@@ -48,10 +53,12 @@ export const AwardSection = () => {
           </li>
 
           <li className={styles.award} data-aos="fade-up">
-            <img
+            <Image
               src="/about/award-03.png"
               alt=""
               className={styles.awardImage}
+              height={40}
+              width={40}
             />
             <p className={styles.awardSubText}>Review / 2023</p>
             <h3 className={`color-heading ${styles.awardTitle}`}>
@@ -60,10 +67,12 @@ export const AwardSection = () => {
           </li>
 
           <li className={styles.award} data-aos="fade-up">
-            <img
+            <Image
               src="/about/award-04.png"
               alt=""
               className={styles.awardImage}
+              height={40}
+              width={40}
             />
             <p className={styles.awardSubText}>Market / 2023</p>
             <h3 className={`color-heading ${styles.awardTitle}`}>

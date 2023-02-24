@@ -29,7 +29,7 @@ type ButtonComponentProps<T extends ButtonComponentType> = {
 export function Button<T extends ButtonComponentType>({
   children,
   as,
-  variant = styles.primary as "primary",
+  variant = "primary",
   size = "default",
   ...restProps
 }: ButtonComponentProps<T>) {

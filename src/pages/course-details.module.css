@@ -1,0 +1,39 @@
+.courseBg {
+  max-width: 1300px;
+  width: 100%;
+  border-radius: var(--radius-600);
+  margin: 8rem auto 0 auto;
+  object-fit: cover;
+  height: 570px;
+}
+
+.courseContent {
+  display: grid;
+  grid-template-columns: 8fr 4fr;
+  margin-top: -3rem;
+  gap: 3rem;
+  margin-bottom: 8rem;
+}
+
+@media screen and (max-width: 68em) {
+  .courseContent {
+    gap: 1rem;
+    grid-template-columns: 8fr 5fr;
+  }
+}
+
+@media screen and (max-width: 57em) {
+  .courseContent {
+    grid-template-columns: 1fr;
+    margin-top: 0;
+  }
+
+  .courseContent {
+    margin-bottom: 2rem;
+  }
+
+  .courseBg {
+    margin-top: 0;
+    border-radius: 0;
+  }
+}
