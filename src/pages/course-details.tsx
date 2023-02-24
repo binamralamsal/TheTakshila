@@ -3,6 +3,7 @@ import styles from "./course-details.module.css";
 import { PageHeader } from "@/components/layout/PageHeader";
 import { CourseContent } from "@/components/course-details/CourseContent";
 import { CourseSidebar } from "@/components/course-details/CourseSidebar";
+import Image from "next/image";
 
 const CourseDetails = () => {
   return (
@@ -12,9 +13,11 @@ const CourseDetails = () => {
       </Head>
 
       <PageHeader title="Course Details" />
-      <img
+      <Image
         src="/courses/course-thumbnail.jpg"
         alt=""
+        width={1300}
+        height={570}
         className={styles.courseBg}
       />
 

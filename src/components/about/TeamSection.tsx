@@ -1,4 +1,5 @@
 import styles from "./TeamSection.module.css";
+import Image from "next/image";
 
 const teams = [
   {
@@ -75,7 +76,7 @@ export const TeamSection = () => {
             >
               <div className={styles.photo}>
                 <div className={styles.inner}>
-                  <img src={team.photo} alt="" />
+                  <Image src={team.photo} alt="" width={182.5} height={182.5} />
 
                   <div className={styles.socials}>
                     <a href="#" className={styles.facebook}>

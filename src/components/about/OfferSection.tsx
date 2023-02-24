@@ -1,4 +1,5 @@
 import styles from "./OfferSection.module.css";
+import Image from "next/image";
 
 export const OfferSection = () => {
   return (
@@ -29,7 +30,7 @@ export const OfferSection = () => {
             data-aos-delay="100"
           >
             <div className={styles.offerIcon}>
-              <img src="/about/offer-01.png" alt="" />
+              <Image src="/about/offer-01.png" alt="" height={40} width={40} />
             </div>
             <h3 className={styles.offerTitle}>Remote Learning</h3>
             <p>
@@ -44,7 +45,7 @@ export const OfferSection = () => {
             data-aos-delay="200"
           >
             <div className={styles.offerIcon}>
-              <img src="/about/offer-02.png" alt="" />
+              <Image src="/about/offer-02.png" alt="" height={40} width={40} />
             </div>
             <h3 className={styles.offerTitle}>Awesome Tutors</h3>
             <p>
@@ -59,7 +60,7 @@ export const OfferSection = () => {
             data-aos-delay="300"
           >
             <div className={styles.offerIcon}>
-              <img src="/about/offer-03.png" alt="" />
+              <Image src="/about/offer-03.png" alt="" height={40} width={40} />
             </div>
             <h3 className={styles.offerTitle}>Global Certificate</h3>
             <p>
@@ -74,7 +75,7 @@ export const OfferSection = () => {
             data-aos-delay="400"
           >
             <div className={styles.offerIcon}>
-              <img src="/about/offer-04.png" alt="" />
+              <Image src="/about/offer-04.png" alt="" height={40} width={40} />
             </div>
             <h3 className={styles.offerTitle}>Carrier Guideline</h3>
             <p>
