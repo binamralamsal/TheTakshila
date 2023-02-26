@@ -24,7 +24,7 @@ export const CourseContent = () => {
           lacus vel facilisis.
         </p>
 
-        <h2>What You'll Learn From This Course</h2>
+        <h2>What You&apos;ll Learn From This Course</h2>
         <ul>
           <li>
             Neque sodales ut etiam sit amet nisl purus non tellus orci ac auctor
