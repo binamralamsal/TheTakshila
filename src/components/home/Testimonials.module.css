@@ -79,13 +79,17 @@
 
 .award h3,
 .award blockquote,
-.award small {
+.award small,
+.award:hover blockquote::after,
+.award:hover blockquote::before {
   transition: 0.4s;
 }
 
 .award:hover h3,
 .award:hover blockquote,
-.award:hover small {
+.award:hover small,
+.award:hover blockquote::after,
+.award:hover blockquote::before {
   color: white;
 }
 
