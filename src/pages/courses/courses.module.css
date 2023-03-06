@@ -1,0 +1,28 @@
+.courses {
+  padding: 8rem 0;
+}
+
+.coursesCards {
+  text-align: initial;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: flex-start;
+  gap: 1.875rem;
+}
+
+@media screen and (max-width: 57em) {
+  .coursesCards {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (max-width: 48em) {
+  .courses {
+    padding: 5rem 0;
+  }
+}
+
+@media screen and (max-width: 40em) {
+  .coursesCards {
+    grid-template-columns: 1fr;
+  }
+}

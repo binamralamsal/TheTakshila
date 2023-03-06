@@ -1,0 +1,108 @@
+.awardSection {
+  padding: 8rem 0;
+  overflow: hidden;
+}
+
+.awardContainer {
+  text-align: center;
+  position: relative;
+}
+
+.title span {
+  display: block;
+}
+
+.preTitle {
+  font-weight: var(--fw-700);
+  text-transform: uppercase;
+  margin-bottom: 0.3125rem;
+}
+
+.mainTitle {
+  font-size: var(--fs-700);
+  font-weight: var(--fw-800);
+  line-height: 1.4;
+  margin-bottom: 3.125rem;
+}
+
+.awards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  list-style-type: none;
+  position: relative;
+}
+
+.awards::before {
+  content: url("/about/award-decoration.png");
+  position: absolute;
+  top: -20%;
+  right: -5%;
+}
+
+.award {
+  border-radius: var(--radius-400);
+  padding: 2rem;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  background: #f5f5f5;
+  transition: 0.4s 0s;
+}
+
+/*.awardImage {*/
+/*  margin-bottom: 1.875rem;*/
+/*}*/
+
+.awardSubText {
+  font-size: var(--fs-300);
+  font-weight: var(--fw-600);
+  color: var(--clr-neutral-300);
+}
+
+.awardTitle {
+  font-size: var(--fs-500);
+  transition: 0.4s;
+  margin: 1.5rem 0;
+  font-weight: var(--fw-700);
+}
+
+.award:hover {
+  background: var(--clr-accent-400);
+}
+
+.award h3,
+.award p {
+  transition: 0.4s;
+}
+
+.award:hover h3,
+.award:hover p {
+  color: white;
+}
+
+@media screen and (max-width: 60em) {
+  .awards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (max-width: 48em) {
+  .awardSection {
+    padding: 5rem 0;
+  }
+
+  .mainTitle {
+    margin-bottom: 2rem;
+  }
+
+  .awards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 32em) {
+  .awards {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}

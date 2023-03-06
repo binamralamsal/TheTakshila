@@ -1,0 +1,89 @@
+.card {
+  padding: 1.25rem;
+  border-radius: var(--radius-400);
+  border: 1px solid #eee;
+  transition: 0.4s;
+}
+
+.card:hover {
+  box-shadow: 0 10px 30px rgb(0 0 0 / 6%);
+}
+
+.card:hover .image {
+  transform: scale(1.1);
+}
+
+.title:hover {
+  color: var(--clr-accent-400);
+}
+
+.imageLink {
+  display: block;
+  border-radius: var(--radius-300);
+  overflow: hidden;
+}
+
+.image {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  object-fit: cover;
+  transition: 0.4s;
+}
+
+.description {
+  margin-top: 1.5625rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.title {
+  font-weight: var(--fw-700);
+  color: var(--clr-heading);
+  line-height: 1.4;
+  font-size: 1.25rem;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.stats {
+  list-style-type: none;
+  display: flex;
+  gap: 2.5rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.stats li {
+  display: flex;
+  gap: 0.4rem;
+  align-items: center;
+}
+
+.separator {
+  border: 1px solid #eee;
+}
+
+.enrolBtn {
+  font-weight: var(--fw-700);
+  align-self: flex-start;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  background: linear-gradient(currentColor 0 0) var(--p, 0) 100% / var(--d, 0)
+    3px no-repeat;
+  transition: 0.3s, background-position 0s 0.3s;
+}
+
+.enrolBtn:hover {
+  color: var(--clr-accent-400);
+  --d: 100%;
+  --p: 100%;
+}
+
+@media screen and (max-width: 65em) {
+  .stats {
+    gap: 0.7rem;
+  }
+}

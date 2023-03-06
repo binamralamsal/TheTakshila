@@ -2,7 +2,6 @@ import styles from "./Navbar.module.css";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import Link from "next/link";
-import { Menu } from "@headlessui/react";
 
 const pagesWithTransparentNavbar = ["/"];
 
@@ -36,6 +35,87 @@ export const Navbar = () => {
         transparent ? styles.transparent : ""
       } ${scrolled ? styles.scrolled : ""} `}
     >
+      <div className={styles.ribbon}>
+        <div className={`container ${styles.ribbonContainer}`}>
+          <div>
+            <div className={styles.ribbonBlock}>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="icon icon-tabler icon-tabler-phone"
+                width="18"
+                height="18"
+                viewBox="0 0 24 24"
+                strokeWidth="2"
+                stroke="currentColor"
+                fill="none"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                <path d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2"></path>
+              </svg>
+              <p>982389474283</p>
+            </div>
+            <div className={`${styles.ribbonBlock} ${styles.canHide}`}>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="icon icon-tabler icon-tabler-mail"
+                width="18"
+                height="18"
+                viewBox="0 0 24 24"
+                strokeWidth="2"
+                stroke="currentColor"
+                fill="none"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                <path d="M3 5m0 2a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2z"></path>
+                <path d="M3 7l9 6l9 -6"></path>
+              </svg>
+              <Link href="/">website@domain.com</Link>
+            </div>
+          </div>
+          <div>
+            <div className={styles.ribbonBlock}>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="icon icon-tabler icon-tabler-brand-facebook"
+                width="18"
+                height="18"
+                viewBox="0 0 24 24"
+                strokeWidth="2"
+                stroke="currentColor"
+                fill="none"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                <path d="M7 10v4h3v7h4v-7h3l1 -4h-4v-2a1 1 0 0 1 1 -1h3v-4h-3a5 5 0 0 0 -5 5v2h-3"></path>
+              </svg>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="icon icon-tabler icon-tabler-brand-linkedin"
+                width="18"
+                height="18"
+                viewBox="0 0 24 24"
+                strokeWidth="2"
+                stroke="currentColor"
+                fill="none"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                <path d="M4 4m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z"></path>
+                <path d="M8 11l0 5"></path>
+                <path d="M8 8l0 .01"></path>
+                <path d="M12 16l0 -5"></path>
+                <path d="M16 16v-3a2 2 0 0 0 -4 0"></path>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
       <div className={`container ${styles.navbarContainer}`}>
         <Link data-aos="fade-right" href="/">
           Event
@@ -67,10 +147,10 @@ export const Navbar = () => {
             <li>
               <Link
                 className={styles.navLink}
-                href="/"
+                href="/courses"
                 onClick={handleToggleNavbar}
               >
-                Home
+                All Courses
               </Link>
             </li>
             <li>
@@ -79,56 +159,37 @@ export const Navbar = () => {
                 href="/about"
                 onClick={handleToggleNavbar}
               >
-                About
+                About Us
               </Link>
             </li>
-            <li className={styles.dropdownLink}>
+            <li>
               <Link
-                href="/course-details"
+                href="/services"
                 className={`${styles.navLink} `}
                 onClick={handleToggleNavbar}
               >
-                Course Details
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="icon icon-tabler icon-tabler-chevron-down"
-                  width="14"
-                  height="14"
-                  viewBox="0 0 24 24"
-                  strokeWidth="2"
-                  stroke="currentColor"
-                  fill="none"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                >
-                  <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                  <path d="M6 9l6 6l6 -6"></path>
-                </svg>
+                Our Services
               </Link>
-              <ul className={styles.dropdown}>
-                <li className={styles.dropdownItem}>
-                  <Link href="#">Typescript</Link>
-                </li>
-                <li className={styles.dropdownItem}>
-                  <Link href="#">Next.js</Link>
-                </li>
-                <li className={styles.dropdownItem}>
-                  <Link href="#">React.js</Link>
-                </li>
-                <li className={styles.dropdownItem}>
-                  <Link href="#">Elixir</Link>
-                </li>
-              </ul>
             </li>
 
             <li>
               <Link
                 className={styles.navLink}
-                href="https://forms.google.com"
+                href="/contact"
+                onClick={handleToggleNavbar}
+              >
+                Enquiry
+              </Link>
+            </li>
+
+            <li>
+              <Link
+                className={styles.navLink}
+                href="gallery"
                 target="_blank"
                 onClick={handleToggleNavbar}
               >
-                Register
+                Gallery
               </Link>
             </li>
           </ul>

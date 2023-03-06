@@ -1,0 +1,147 @@
+.contactSection {
+  padding: 8rem 0;
+  overflow: hidden;
+}
+
+.contactContainer {
+  text-align: center;
+  position: relative;
+}
+
+.title > span {
+  display: block;
+}
+
+.contactSection a {
+  display: block;
+}
+
+.preTitle {
+  font-weight: var(--fw-700);
+  text-transform: uppercase;
+  margin-bottom: 0.3125rem;
+}
+
+.mainTitle {
+  font-size: var(--fs-700);
+  font-weight: var(--fw-800);
+  line-height: 1.4;
+  margin-bottom: 2.5rem;
+}
+
+.contactGrid {
+  gap: 6.25rem;
+}
+
+.cards {
+  gap: 1.875rem;
+}
+
+.card {
+  padding: 3.125rem 1.25rem;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06);
+  border-radius: var(--radius-500);
+}
+
+.icon {
+  display: inline-flex;
+  padding: 0.9rem;
+  border-radius: 100%;
+}
+
+.title {
+  margin: 1.25rem 0 0.9375rem 0;
+  font-weight: var(--fw-800);
+}
+
+.card01 .icon,
+.card04 .icon {
+  background: hsla(219, 87%, 51%, 0.1);
+  color: var(--clr-accent-400);
+}
+
+.card02 .icon,
+.card03 .icon {
+  background: rgba(251, 124, 86, 0.1);
+  color: var(--clr-secondary-400);
+}
+
+.card03 .icon {
+  background: rgba(255, 164, 27, 0.1);
+}
+
+.card:hover {
+  background: var(--clr-secondary-400);
+  color: white;
+  transition: 0.4s;
+  transform: translateY(-15px);
+}
+
+.card:hover a {
+  color: white;
+  transition: 0.4s;
+}
+
+.card:hover .icon {
+  background: white;
+  color: var(--clr-secondary-400);
+  transition: 0.4s;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.contactSection input,
+.contactSection textarea {
+  background: #f5f5f5;
+  border: 1px solid transparent;
+  border-radius: var(--radius-500);
+  outline: transparent;
+  padding: 1rem 1.875rem;
+  transition: 0.4s;
+}
+
+.contactSection input:focus,
+.contactSection textarea:focus {
+  border-color: var(--clr-accent-400);
+}
+
+.contactSection textarea {
+  resize: vertical;
+}
+
+.contactSection iframe {
+  height: 31.25rem;
+  border: 0;
+  width: 100%;
+  margin-top: 5rem;
+}
+
+@media screen and (max-width: 62.5em) {
+  .contactGrid {
+    gap: 3rem;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (max-width: 48em) {
+  .contactSection {
+    padding: 5rem 0;
+  }
+
+  .cards {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (max-width: 32em) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+}

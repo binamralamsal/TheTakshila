@@ -1,10 +1,130 @@
 .footer {
-  background: var(--clr-accent-900);
+  background: var(--clr-accent-600);
   overflow: hidden;
   color: white;
+}
+
+.footerContainer {
+  display: grid;
+  padding: 9rem 0;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 2rem;
+  row-gap: 4rem;
+  position: relative;
+}
+
+.footerContainer::before,
+.footerContainer::after {
+  position: absolute;
+}
+
+.footerContainer::before {
+  content: url("/home/footer-decoration-1.png");
+  left: -25%;
+  top: 20%;
+}
+
+.footerContainer::after {
+  content: url("/home/footer-decoration-2.png");
+  right: -20%;
+  bottom: 0%;
+}
+
+.title {
+  font-size: 1.5rem;
+  font-weight: var(--fw-700);
+  margin-bottom: 1.25rem;
+}
+
+.aboutWebsite {
+  margin-bottom: 2.5rem;
+}
+
+.links {
+  margin-left: 2rem;
+}
+
+.list {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.list a {
+  color: white;
+  font-weight: var(--fw-600);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.list a:hover {
+  color: var(--clr-accent-400);
+}
+
+.contactInfo li {
+  display: flex;
+  gap: 0.6rem;
+}
+
+.socialIcons {
+  flex-direction: row;
+  gap: 1rem;
+}
+
+.socialIcons a {
+  padding: 1rem;
+  background: var(--clr-accent-800);
+  border-radius: var(--radius-400);
+  transition: 0.4s;
+  flex-wrap: wrap;
+}
+
+.socialIcons a:hover {
+  color: white;
+  background: var(--clr-accent-400);
 }
 
 .copyrightText {
   text-align: center;
   padding: 2rem;
+}
+
+@media screen and (max-width: 64em) {
+  .links {
+    margin: 0;
+  }
+}
+
+@media screen and (max-width: 60em) {
+  .footerContainer {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (max-width: 50em) {
+  .footerContainer::before,
+  .footerContainer::after {
+    display: none;
+  }
+
+  .websiteInfo {
+    grid-column: span 2;
+  }
+
+  .footerContainer {
+    padding: 5rem 0;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (max-width: 36em) {
+  .websiteInfo {
+    grid-column: span 1;
+  }
+
+  .footerContainer {
+    grid-template-columns: 1fr;
+  }
 }

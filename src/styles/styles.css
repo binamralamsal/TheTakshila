@@ -1,37 +1,31 @@
 :root {
-  --clr-accent-100: hsl(219, 87%, 80%);
-  --clr-accent-400: hsl(219, 87%, 51%);
-  --clr-accent-600: hsl(219, 87%, 30%);
-  --clr-accent-800: hsl(219, 87%, 22%);
-  --clr-accent-900: hsl(219, 87%, 15%);
-
-  --clr-secondary-400: hsl(26, 98%, 49%);
-
+  --clr-accent-100: hsl(26, 98%, 80%);
+  --clr-accent-400: hsl(26, 98%, 49%);
+  --clr-accent-600: hsl(26, 98%, 30%);
+  --clr-accent-800: hsl(26, 98%, 22%);
+  --clr-accent-900: hsl(26, 98%, 15%);
+  --clr-secondary-400: hsl(264, 100%, 50%);
   --clr-neutral-100: hsl(0, 0%, 100%);
   --clr-neutral-200: hsl(0, 0%, 40%);
   --clr-neutral-300: hsl(0, 0%, 30%);
   --clr-neutral-400: hsl(0, 0%, 20%);
-
   --clr-shade: hsl(0, 0%, 96%);
   --clr-heading: var(--clr-accent-900);
-
   --fs-300: 0.875rem;
   --fs-400: 1rem;
   --fs-500: 1.25rem;
+  --fs-550: 1.5rem;
   --fs-600: 2rem;
   --fs-700: 2.5rem;
   --fs-900: 4rem;
-
   --fw-500: 300;
   --fw-600: 400;
   --fw-700: 500;
   --fw-800: 600;
-
   --radius-300: 0.1875em;
   --radius-400: 0.3125em;
   --radius-500: 0.4em;
   --radius-600: 0.5em;
-
   --fs-body: var(--fs-400);
   --fw-body: var(--fw-500);
 }
@@ -100,6 +94,7 @@ a:hover {
 @media screen and (max-width: 48em) {
   :root {
     --fs-500: 1.15rem;
+    --fs-550: 1.25rem;
     --fs-600: 1.5rem;
     --fs-700: 2rem;
     --fs-900: 2.5rem;

@@ -5,7 +5,7 @@ import { CourseContent } from "@/components/course-details/CourseContent";
 import { CourseSidebar } from "@/components/course-details/CourseSidebar";
 import Image from "next/image";
 
-const CourseDetails = () => {
+const Slug = () => {
   return (
     <>
       <Head>
@@ -29,4 +29,4 @@ const CourseDetails = () => {
   );
 };
 
-export default CourseDetails;
+export default Slug;

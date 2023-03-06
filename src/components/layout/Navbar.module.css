@@ -1,5 +1,5 @@
 .navbarWrapper {
-  padding: 1rem 0;
+  padding: 0 0 1rem 0;
   position: relative;
   top: 0;
   z-index: 999;
@@ -22,7 +22,7 @@
 }
 
 .navbarWrapper.scrolled {
-  padding: 0.5rem 0;
+  padding: 0 0 0.5rem 0;
   position: sticky;
   background-color: white;
   animation: headerSticky 0.95s ease forwards;
@@ -31,6 +31,13 @@
 
 .navbarWrapper.transparent.scrolled {
   position: fixed;
+}
+
+.ribbon {
+  padding: 0.25rem;
+  background: var(--clr-accent-400);
+  margin-bottom: 0.5rem;
+  color: white;
 }
 
 .navbarContainer {
@@ -96,40 +103,35 @@
   color: var(--clr-accent-600);
 }
 
-.dropdown {
-  display: none;
-  position: absolute;
-  padding: 0.25rem;
-  top: 4.2rem;
-  background: white;
-  list-style-type: none;
-  flex-direction: column;
-  border-radius: var(--radius-400);
-  gap: 0.25rem;
-  min-width: 20ch;
+.ribbonContainer {
+  display: flex;
+  justify-content: space-between;
+  font-size: var(--fs-300);
 }
 
-.dropdownItem a {
-  color: var(--clr-neutral-400);
-  display: block;
-  padding: 0.5rem 0.75rem;
-  transition: 0.3s;
-  border-radius: var(--radius-500);
-}
-
-.dropdownItem a:hover {
-  background: var(--clr-accent-400);
+.ribbonContainer a {
   color: white;
 }
 
-.dropdownLink:hover > .dropdown,
-.dropdownLink .navLink:focus ~ .dropdown {
+.ribbonContainer > div {
   display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.ribbonBlock {
+  display: flex;
+  gap: 0.25rem;
+  align-items: center;
 }
 
 @media screen and (max-width: 40em) {
+  .canHide {
+    display: none;
+  }
+
   .navbarWrapper {
-    padding: 0.5rem 0;
+    padding: 0 0 0.5rem 0;
   }
 
   .primaryNavigation {

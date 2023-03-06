@@ -9,8 +9,7 @@ export const JobStagesSection = () => {
       <div className={`container ${styles.container}`}>
         <header>
           <h2 className={styles.title} id="job-stages-title" data-aos="fade-up">
-            Preparing of Success:
-            <span>A Guide to Acing Your Job Interviews</span>
+            What we do?
           </h2>
         </header>
 
