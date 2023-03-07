@@ -50,7 +50,7 @@
   right: -5%;
   height: 100%;
   border-radius: 38% 62% 64% 36%/43% 35% 65% 57%;
-  border: 2px solid var(--clr-secondary-400);
+  border: 2px solid var(--clr-accent-400);
   animation: rotate-animate 13s linear infinite;
 }
 
@@ -130,7 +130,7 @@
 .featureStat {
   font-size: var(--fs-600);
   font-weight: var(--fw-700);
-  color: var(--clr-secondary-400);
+  color: var(--clr-accent-400);
   margin-bottom: 0.3125rem;
 }
 
