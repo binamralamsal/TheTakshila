@@ -125,9 +125,13 @@
   align-items: center;
 }
 
-@media screen and (max-width: 40em) {
+@media screen and (max-width: 50em) {
   .canHide {
     display: none;
+  }
+
+  .logo {
+    height: 40px;
   }
 
   .navbarWrapper {

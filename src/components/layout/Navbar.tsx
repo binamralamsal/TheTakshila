@@ -2,6 +2,7 @@ import styles from "./Navbar.module.css";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import { Logo } from "@/assets/icons";
 
 const pagesWithTransparentNavbar = ["/"];
 
@@ -118,7 +119,7 @@ export const Navbar = () => {
       </div>
       <div className={`container ${styles.navbarContainer}`}>
         <Link data-aos="fade-right" href="/">
-          Event
+          <Logo width={150} height={50} className={styles.logo} />
         </Link>
 
         <button
