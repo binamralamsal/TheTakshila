@@ -1,5 +1,5 @@
 .footer {
-  background: var(--clr-accent-600);
+  background: hsl(336, 100%, 50%);
   overflow: hidden;
   color: white;
 }
@@ -60,7 +60,7 @@
 }
 
 .list a:hover {
-  color: var(--clr-accent-400);
+  color: hsl(336, 100%, 15%);
 }
 
 .contactInfo li {
@@ -75,7 +75,7 @@
 
 .socialIcons a {
   padding: 1rem;
-  background: var(--clr-accent-800);
+  background: hsl(336, 100%, 40%);
   border-radius: var(--radius-400);
   transition: 0.4s;
   flex-wrap: wrap;
@@ -83,7 +83,7 @@
 
 .socialIcons a:hover {
   color: white;
-  background: var(--clr-accent-400);
+  background: hsl(336, 100%, 60%);
 }
 
 .copyrightText {

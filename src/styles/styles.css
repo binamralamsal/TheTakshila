@@ -1,9 +1,9 @@
 :root {
-  --clr-accent-100: hsl(26, 98%, 80%);
-  --clr-accent-400: hsl(26, 98%, 49%);
-  --clr-accent-600: hsl(26, 98%, 30%);
-  --clr-accent-800: hsl(26, 98%, 22%);
-  --clr-accent-900: hsl(26, 98%, 15%);
+  --clr-accent-100: hsl(13, 100%, 80%);
+  --clr-accent-400: hsl(13, 100%, 52%);
+  --clr-accent-600: hsl(13, 100%, 30%);
+  --clr-accent-800: hsl(13, 100%, 22%);
+  --clr-accent-900: hsl(13, 100%, 15%);
   --clr-secondary-400: hsl(264, 100%, 50%);
   --clr-neutral-100: hsl(0, 0%, 100%);
   --clr-neutral-200: hsl(0, 0%, 40%);
