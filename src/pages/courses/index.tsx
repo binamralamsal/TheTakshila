@@ -2,6 +2,8 @@ import { PageHeader } from "@/components/layout/PageHeader";
 import Head from "next/head";
 import { CourseCard } from "@/components/courses/CourseCard";
 import styles from "./courses.module.css";
+import { Navbar } from "@/components/layout/Navbar";
+import { Footer } from "@/components/layout/Footer";
 
 const CoursesPage = () => {
   return (
@@ -11,6 +13,8 @@ const CoursesPage = () => {
           Courses | TheTakshila - Committed to Learn Excellence in Education
         </title>
       </Head>
+
+      <Navbar />
       <PageHeader title="Courses" />
 
       <section className={`container ${styles.courses}`}>
@@ -96,6 +100,8 @@ const CoursesPage = () => {
           />
         </div>
       </section>
+
+      <Footer />
     </>
   );
 };

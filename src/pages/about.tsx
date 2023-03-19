@@ -6,6 +6,8 @@ import { WorkshopSection } from "@/components/about/WorkshopSection";
 import { TeamSection } from "@/components/about/TeamSection";
 import { UpcomingEventSection } from "@/components/about/UpcomingEventSection";
 import { AwardSection } from "@/components/about/AwardSection";
+import { Navbar } from "@/components/layout/Navbar";
+import { Footer } from "@/components/layout/Footer";
 
 const About = () => {
   return (
@@ -13,6 +15,9 @@ const About = () => {
       <Head>
         <title>About | Xavier Entrepreneurship Bootcamp</title>
       </Head>
+
+      <Navbar />
+
       <PageHeader title="About" />
       <AboutSection />
       <OfferSection />
@@ -20,6 +25,8 @@ const About = () => {
       <TeamSection />
       <UpcomingEventSection />
       <AwardSection />
+
+      <Footer />
     </>
   );
 };

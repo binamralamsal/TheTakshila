@@ -3,6 +3,9 @@ import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { Logo } from "@/assets/icons";
+import { useUser } from "@/hooks/useUser";
+import { signOut } from "next-auth/react";
+import { queryClient } from "@/pages/_app";
 
 const pagesWithTransparentNavbar = ["/"];
 
@@ -11,6 +14,8 @@ export const Navbar = () => {
 
   const [scrolled, setScrolled] = useState(false);
   const [navbarOpened, setNavbarOpened] = useState(false);
+
+  const { data: userData } = useUser();
 
   const transparent = pagesWithTransparentNavbar.includes(router.asPath);
 
@@ -29,6 +34,14 @@ export const Navbar = () => {
   }, []);
 
   const handleToggleNavbar = () => setNavbarOpened((prev) => !prev);
+
+  const handleLogout = async () => {
+    handleToggleNavbar();
+    await signOut({ redirect: false });
+    await queryClient.setQueryData(["current-user"], () => {
+      return null;
+    });
+  };
 
   return (
     <header
@@ -186,13 +199,34 @@ export const Navbar = () => {
             <li>
               <Link
                 className={styles.navLink}
-                href="gallery"
-                target="_blank"
+                href="/gallery"
                 onClick={handleToggleNavbar}
               >
                 Gallery
               </Link>
             </li>
+            {userData ? (
+              <>
+                <li>
+                  <Link
+                    className={styles.navLink}
+                    href="/admin/users"
+                    onClick={handleToggleNavbar}
+                  >
+                    Admin
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    className={styles.navLink}
+                    href="#"
+                    onClick={handleLogout}
+                  >
+                    Logout
+                  </Link>
+                </li>
+              </>
+            ) : null}
           </ul>
         </nav>
       </div>

@@ -1,10 +1,14 @@
 import styles from "./contact.module.css";
 import { PageHeader } from "@/components/layout/PageHeader";
 import { Button } from "@/components/ui/Button";
+import { Navbar } from "@/components/layout/Navbar";
+import { Footer } from "@/components/layout/Footer";
 
 const ContactPage = () => {
   return (
     <>
+      <Navbar />
+
       <PageHeader title="Contact" />
 
       <section
@@ -193,6 +197,8 @@ const ContactPage = () => {
           </div>
         </div>
       </section>
+
+      <Footer />
     </>
   );
 };

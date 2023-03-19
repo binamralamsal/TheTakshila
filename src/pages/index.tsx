@@ -5,6 +5,8 @@ import { JobStagesSection } from "@/components/home/JobStagesSection";
 import { FeaturesSection } from "@/components/home/FeaturesSection";
 import { CourseCategories } from "@/components/home/CourseCategories";
 import { Testimonials } from "@/components/home/Testimonials";
+import { Navbar } from "@/components/layout/Navbar";
+import { Footer } from "@/components/layout/Footer";
 
 export default function Home() {
   return (
@@ -16,12 +18,16 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
+      <Navbar />
+
       <HeroSection />
       <AboutSection />
       <JobStagesSection />
       <CourseCategories />
       <FeaturesSection />
       <Testimonials />
+
+      <Footer />
     </>
   );
 }

@@ -4,6 +4,8 @@ import { PageHeader } from "@/components/layout/PageHeader";
 import { CourseContent } from "@/components/course-details/CourseContent";
 import { CourseSidebar } from "@/components/course-details/CourseSidebar";
 import Image from "next/image";
+import { Navbar } from "@/components/layout/Navbar";
+import { Footer } from "@/components/layout/Footer";
 
 const Slug = () => {
   return (
@@ -12,6 +14,7 @@ const Slug = () => {
         <title>Course Details | Xavier Entrepreneurship Bootcamp</title>
       </Head>
 
+      <Navbar />
       <PageHeader title="Course Details" />
       <Image
         src="/courses/course-thumbnail.jpg"
@@ -25,6 +28,7 @@ const Slug = () => {
         <CourseContent />
         <CourseSidebar />
       </div>
+      <Footer />
     </>
   );
 };
