@@ -207,15 +207,17 @@ export const Navbar = () => {
             </li>
             {userData ? (
               <>
-                <li>
-                  <Link
-                    className={styles.navLink}
-                    href="/admin/users"
-                    onClick={handleToggleNavbar}
-                  >
-                    Admin
-                  </Link>
-                </li>
+                {userData.user.isAdmin ? (
+                  <li>
+                    <Link
+                      className={styles.navLink}
+                      href="/admin/users"
+                      onClick={handleToggleNavbar}
+                    >
+                      Admin
+                    </Link>
+                  </li>
+                ) : null}
                 <li>
                   <Link
                     className={styles.navLink}

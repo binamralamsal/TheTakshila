@@ -14,5 +14,8 @@ export const registerUserSchema = loginUserSchema.merge(
   })
 );
 
+export const updateUserSchema = registerUserSchema.partial();
+
 export type LoginUserCredentialsDTO = z.infer<typeof loginUserSchema>;
 export type RegisterUserCredentialsDTO = z.infer<typeof registerUserSchema>;
+export type UpdateUserCredentialsDTO = z.infer<typeof updateUserSchema>;

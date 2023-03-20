@@ -22,6 +22,8 @@ import {
   IconLogout,
   IconCheck,
   IconUsers,
+  IconChefHat,
+  IconSchool,
 } from "@tabler/icons-react";
 import Link from "next/link";
 import { useRouter } from "next/router";
@@ -116,6 +118,12 @@ export const data = [
     color: "red",
     label: "Users",
     href: "users",
+  },
+  {
+    icon: <IconSchool size={16} />,
+    color: "blue",
+    label: "Courses",
+    href: "Courses",
   },
 ];
 

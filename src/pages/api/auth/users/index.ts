@@ -81,7 +81,9 @@ export default async function handler(
         };
       }
 
-      const users = await User.find(filterQuery).select("-password");
+      const users = await User.find(filterQuery)
+        .select("-password")
+        .sort({ createdAt: -1 });
       return res.json({ status: "OK", users });
     }
   } catch (error) {
