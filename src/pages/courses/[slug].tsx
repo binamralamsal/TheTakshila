@@ -22,7 +22,7 @@ const SingleCoursePage = (
       <Navbar />
       <PageHeader title="Course Details" />
       <Image
-        src="/courses/course-thumbnail.jpg"
+        src={props.course.featuredImage}
         alt=""
         width={1300}
         height={570}

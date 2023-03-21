@@ -57,6 +57,10 @@ a:hover {
   color: hsl(219, 87%, 15%);
 }
 
+img {
+  display: block;
+}
+
 /* Utility Classes */
 .container {
   --max-width: 1110px;
