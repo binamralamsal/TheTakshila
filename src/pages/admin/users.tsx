@@ -116,7 +116,6 @@ export function UsersTable() {
             <Text fz="sm" fw={500}>
               {item.name}
             </Text>
-            {/*</Anchor>*/}
             <Text fz="xs" c="dimmed">
               {item.email}
             </Text>
@@ -133,7 +132,10 @@ export function UsersTable() {
           <ActionIcon
             onClick={() => {
               setSelectedUser(item);
-              handleOpenDrawer();
+
+              setTimeout(() => {
+                handleOpenDrawer();
+              }, 0);
             }}
             variant="outline"
             color="blue"

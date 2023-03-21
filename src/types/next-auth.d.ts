@@ -1,6 +1,3 @@
-// noinspection ES6UnusedImports,JSUnusedGlobalSymbols
-
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import { ObjectId } from "mongoose";
 import NextAuth, { DefaultSession } from "next-auth";
 

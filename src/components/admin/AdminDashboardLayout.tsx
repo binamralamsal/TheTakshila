@@ -22,7 +22,6 @@ import {
   IconLogout,
   IconCheck,
   IconUsers,
-  IconChefHat,
   IconSchool,
 } from "@tabler/icons-react";
 import Link from "next/link";
