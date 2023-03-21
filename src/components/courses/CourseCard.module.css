@@ -39,12 +39,15 @@
 }
 
 .title {
-  font-weight: var(--fw-700);
   color: var(--clr-heading);
   line-height: 1.4;
   font-size: 1.25rem;
   text-decoration: none;
   transition: color 0.2s;
+}
+
+.title h3 {
+  font-weight: var(--fw-700);
 }
 
 .stats {
@@ -74,6 +77,20 @@
   background: linear-gradient(currentColor 0 0) var(--p, 0) 100% / var(--d, 0)
     3px no-repeat;
   transition: 0.3s, background-position 0s 0.3s;
+}
+
+.header {
+  margin-top: -0.75rem;
+}
+
+.skillLevelBadge {
+  background: var(--clr-accent-100);
+  border-radius: var(--radius-500);
+  color: var(--clr-accent-400);
+  padding: 0.25rem 0.5rem;
+  font-weight: 500;
+  font-size: var(--fs-300);
+  align-self: flex-start;
 }
 
 .enrolBtn:hover {

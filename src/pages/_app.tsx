@@ -1,4 +1,3 @@
-import "@/styles/css-reset.css";
 import "@/styles/styles.css";
 import type { AppProps } from "next/app";
 import { Lexend } from "@next/font/google";
@@ -48,6 +47,7 @@ export default function App({
             },
             primaryColor: "accent",
             primaryShade: 6,
+            fontFamily: lexend.style.fontFamily,
           }}
           withGlobalStyles
           withNormalizeCSS

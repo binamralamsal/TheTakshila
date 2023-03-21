@@ -1,7 +1,8 @@
 import styles from "./CourseSidebar.module.css";
 import { Button } from "@/components/ui/Button";
+import { ICourse } from "@/models/course";
 
-export const CourseSidebar = () => {
+export const CourseSidebar = (props: { course: ICourse }) => {
   return (
     <aside className={styles.courseSidebar}>
       <ul>
@@ -27,7 +28,7 @@ export const CourseSidebar = () => {
             </span>
             Duration
           </span>
-          <span>3 days</span>
+          <span>{props.course.duration}</span>
         </li>
 
         <li>
@@ -54,36 +55,36 @@ export const CourseSidebar = () => {
             </span>
             Skill Level
           </span>
-          <span>Advanced</span>
+          <span>{props.course.skillLevel}</span>
         </li>
 
-        <li>
-          <span className={styles.statTitle}>
-            <span className={styles.icon}>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="icon icon-tabler icon-tabler-world"
-                width="14"
-                height="14"
-                viewBox="0 0 24 24"
-                strokeWidth="2"
-                stroke="currentColor"
-                fill="none"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              >
-                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" />
-                <path d="M3.6 9l16.8 0" />
-                <path d="M3.6 15l16.8 0" />
-                <path d="M11.5 3a17 17 0 0 0 0 18" />
-                <path d="M12.5 3a17 17 0 0 1 0 18" />
-              </svg>
-            </span>
-            Language
-          </span>
-          <span>English</span>
-        </li>
+        {/*<li>*/}
+        {/*  <span className={styles.statTitle}>*/}
+        {/*    <span className={styles.icon}>*/}
+        {/*      <svg*/}
+        {/*        xmlns="http://www.w3.org/2000/svg"*/}
+        {/*        className="icon icon-tabler icon-tabler-world"*/}
+        {/*        width="14"*/}
+        {/*        height="14"*/}
+        {/*        viewBox="0 0 24 24"*/}
+        {/*        strokeWidth="2"*/}
+        {/*        stroke="currentColor"*/}
+        {/*        fill="none"*/}
+        {/*        strokeLinecap="round"*/}
+        {/*        strokeLinejoin="round"*/}
+        {/*      >*/}
+        {/*        <path stroke="none" d="M0 0h24v24H0z" fill="none" />*/}
+        {/*        <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" />*/}
+        {/*        <path d="M3.6 9l16.8 0" />*/}
+        {/*        <path d="M3.6 15l16.8 0" />*/}
+        {/*        <path d="M11.5 3a17 17 0 0 0 0 18" />*/}
+        {/*        <path d="M12.5 3a17 17 0 0 1 0 18" />*/}
+        {/*      </svg>*/}
+        {/*    </span>*/}
+        {/*    Language*/}
+        {/*  </span>*/}
+        {/*  <span>English</span>*/}
+        {/*</li>*/}
 
         <li>
           <span className={styles.statTitle}>
@@ -111,36 +112,7 @@ export const CourseSidebar = () => {
             </span>
             Certificate
           </span>
-          <span>Yes</span>
-        </li>
-
-        <li>
-          <span className={styles.statTitle}>
-            <span className={styles.icon}>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="icon icon-tabler icon-tabler-calendar"
-                width="14"
-                height="14"
-                viewBox="0 0 24 24"
-                strokeWidth="2"
-                stroke="currentColor"
-                fill="none"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              >
-                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                <path d="M4 5m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z" />
-                <path d="M16 3l0 4" />
-                <path d="M8 3l0 4" />
-                <path d="M4 11l16 0" />
-                <path d="M11 15l1 0" />
-                <path d="M12 15l0 3" />
-              </svg>
-            </span>
-            Deadline
-          </span>
-          <span>20th Feb, 2023</span>
+          <span>{props.course.certificate ? "Yes" : "No"}</span>
         </li>
 
         <li>
@@ -165,7 +137,7 @@ export const CourseSidebar = () => {
             </span>
             Instructor
           </span>
-          <span>Nancy Philipps</span>
+          <span>{props.course.instructor}</span>
         </li>
 
         <li className={styles.lastDetail}>
@@ -190,7 +162,7 @@ export const CourseSidebar = () => {
             </span>
             Price
           </span>
-          <span>Rs. 500</span>
+          <span>Rs. {props.course.price}</span>
         </li>
       </ul>
       <Button size="large" href="https://forms.google.com" target="_blank">

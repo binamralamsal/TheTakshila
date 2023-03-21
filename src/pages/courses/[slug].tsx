@@ -6,8 +6,13 @@ import { CourseSidebar } from "@/components/course-details/CourseSidebar";
 import Image from "next/image";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
+import Course, { ICourse } from "@/models/course";
+import { connectDatabase } from "@/utils/db";
+import { GetServerSideProps, InferGetServerSidePropsType } from "next";
 
-const Slug = () => {
+const SingleCoursePage = (
+  props: InferGetServerSidePropsType<typeof getServerSideProps>
+) => {
   return (
     <>
       <Head>
@@ -25,12 +30,29 @@ const Slug = () => {
       />
 
       <div className={`container ${styles.courseContent}`}>
-        <CourseContent />
-        <CourseSidebar />
+        <CourseContent course={props.course} />
+        <CourseSidebar course={props.course} />
       </div>
       <Footer />
     </>
   );
 };
 
-export default Slug;
+export const getServerSideProps: GetServerSideProps = async (context) => {
+  await connectDatabase();
+
+  const { slug } = context.query;
+
+  const course = (await Course.findById(slug as string)) as ICourse;
+
+  if (!course)
+    return {
+      notFound: true,
+    };
+
+  return {
+    props: { course: JSON.parse(JSON.stringify(course)) },
+  };
+};
+
+export default SingleCoursePage;

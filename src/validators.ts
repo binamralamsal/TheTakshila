@@ -16,6 +16,19 @@ export const registerUserSchema = loginUserSchema.merge(
 
 export const updateUserSchema = registerUserSchema.partial();
 
+export const newCourseSchema = z.object({
+  featuredImage: z.string().min(3, { message: "Featured Image is required" }),
+  title: z.string().min(5),
+  duration: z.string().min(3),
+  skillLevel: z.string().min(3),
+  certificate: z.boolean().default(false),
+  instructor: z.string().min(3),
+  price: z.number(),
+  content: z.string().min(10),
+});
+
 export type LoginUserCredentialsDTO = z.infer<typeof loginUserSchema>;
 export type RegisterUserCredentialsDTO = z.infer<typeof registerUserSchema>;
 export type UpdateUserCredentialsDTO = z.infer<typeof updateUserSchema>;
+
+export type NewCourseCredentialsDTO = z.infer<typeof newCourseSchema>;

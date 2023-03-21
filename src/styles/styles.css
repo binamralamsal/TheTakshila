@@ -1,5 +1,5 @@
 :root {
-  --clr-accent-100: hsl(13, 100%, 80%);
+  --clr-accent-100: hsl(13, 100%, 90%);
   --clr-accent-400: hsl(13, 100%, 52%);
   --clr-accent-600: hsl(13, 100%, 30%);
   --clr-accent-800: hsl(13, 100%, 22%);
@@ -28,6 +28,12 @@
   --radius-600: 0.5em;
   --fs-body: var(--fs-400);
   --fw-body: var(--fw-500);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 html {

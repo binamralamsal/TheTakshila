@@ -122,7 +122,7 @@ export const data = [
     icon: <IconSchool size={16} />,
     color: "blue",
     label: "Courses",
-    href: "Courses",
+    href: "courses",
   },
 ];
 
