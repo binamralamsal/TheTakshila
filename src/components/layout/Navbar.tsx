@@ -176,15 +176,6 @@ export const Navbar = () => {
                 About Us
               </Link>
             </li>
-            <li>
-              <Link
-                href="/services"
-                className={`${styles.navLink} `}
-                onClick={handleToggleNavbar}
-              >
-                Our Programs
-              </Link>
-            </li>
 
             <li>
               <Link
