@@ -60,11 +60,11 @@ const ContactPage = () => {
 
                 <div>
                   <a href="#" target="_blank">
-                    www.eduvibe.com
+                    www.thetakshila.in
                   </a>
-                  <a href="#" target="_blank">
+                  {/* <a href="#" target="_blank">
                     www.wpvibe.com
-                  </a>
+                  </a> */}
                 </div>
               </div>
 
@@ -90,8 +90,8 @@ const ContactPage = () => {
                 <h3 className={styles.title}>Call Us</h3>
 
                 <div>
-                  <p>+91 9172124795</p>
-                  <p>+91 8459231328</p>
+                  {/* <p>+91 9172124795</p> */}
+                  <p> +977 9851230893</p>
                 </div>
               </div>
 
@@ -119,11 +119,11 @@ const ContactPage = () => {
 
                 <div>
                   <a href="#" target="_blank">
-                    eduvibe@mail.com
+                    info@thetakshila.in
                   </a>
-                  <a href="#" target="_blank">
+                  {/* <a href="#" target="_blank">
                     wpvibe@mail.com
-                  </a>
+                  </a> */}
                 </div>
               </div>
 
@@ -153,7 +153,7 @@ const ContactPage = () => {
                 <h3 className={styles.title}>Our Location</h3>
 
                 <div>
-                  <p>486 Normana Avenue Morningtide, 4223</p>
+                  <p>Balkumari, Kathmandu</p>
                 </div>
               </div>
             </div>

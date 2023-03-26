@@ -68,7 +68,7 @@ export const Navbar = () => {
                 <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
                 <path d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2"></path>
               </svg>
-              <p>982389474283</p>
+              <p>9851230893</p>
             </div>
             <div className={`${styles.ribbonBlock} ${styles.canHide}`}>
               <svg
@@ -87,7 +87,7 @@ export const Navbar = () => {
                 <path d="M3 5m0 2a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2z"></path>
                 <path d="M3 7l9 6l9 -6"></path>
               </svg>
-              <Link href="/">website@domain.com</Link>
+              <Link href="/">info@thetakshila.in</Link>
             </div>
           </div>
           <div>
@@ -182,7 +182,7 @@ export const Navbar = () => {
                 className={`${styles.navLink} `}
                 onClick={handleToggleNavbar}
               >
-                Our Services
+                Our Programs
               </Link>
             </li>
 
@@ -196,15 +196,6 @@ export const Navbar = () => {
               </Link>
             </li>
 
-            <li>
-              <Link
-                className={styles.navLink}
-                href="/gallery"
-                onClick={handleToggleNavbar}
-              >
-                Gallery
-              </Link>
-            </li>
             {userData ? (
               <>
                 {userData.user.isAdmin ? (

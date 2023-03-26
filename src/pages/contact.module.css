@@ -71,7 +71,7 @@
 }
 
 .card:hover {
-  background: var(--clr-secondary-400);
+  background: var(--clr-accent-400);
   color: white;
   transition: 0.4s;
   transform: translateY(-15px);
