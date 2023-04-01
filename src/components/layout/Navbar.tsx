@@ -131,8 +131,9 @@ export const Navbar = () => {
         </div>
       </div>
       <div className={`container ${styles.navbarContainer}`}>
-        <Link data-aos="fade-right" href="/">
-          <Logo width={150} height={50} className={styles.logo} />
+        <Link data-aos="fade-right" href="/" className={styles.logo}>
+          <Logo width={50} height={50} />
+          The Takshila
         </Link>
 
         <button

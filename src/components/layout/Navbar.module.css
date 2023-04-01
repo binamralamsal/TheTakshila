@@ -125,12 +125,20 @@
   align-items: center;
 }
 
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: var(--fs-550);
+  font-weight: var(--fw-600);
+}
+
 @media screen and (max-width: 50em) {
   .canHide {
     display: none;
   }
 
-  .logo {
+  .logo svg {
     height: 40px;
   }
 
